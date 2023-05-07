@@ -20,12 +20,14 @@ public class SurveyController {
         this.surveyRepository = surveyRepository;
     }
 
+
+    @CrossOrigin
     @PostMapping("/survey-form")
     public ResponseEntity<String> submitForm(@RequestBody SurveyForm form) {
         surveyRepository.save(form);
         return ResponseEntity.ok("Form submitted successfully");
     }
-
+    @CrossOrigin
     @GetMapping("/survey-form")
     public ResponseEntity<List<SurveyForm>> getAllSurveyForms() {
         Iterable<SurveyForm> all = surveyRepository.findAll();

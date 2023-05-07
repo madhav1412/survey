@@ -15,16 +15,18 @@ public class SurveyForm {
     @Id
     @GeneratedValue
     private Long id;
-    private String userName;
+    private String firstName;
+    private String lastName;
     private String streetAddress;
     private String city;
     private String state;
     private String zip;
     private String telephone;
     private String email;
-    private String url;
-    private LocalDate surveyDate;
+    private String surveyDate;
     @ElementCollection
     private List<String> campusLikes;
     private String interestedIn;
+    private String recommendation;
+    private String comments;
 }
