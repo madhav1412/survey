@@ -12,6 +12,7 @@ import java.util.List;
 @Data
 @Entity
 public class SurveyForm {
+    // This class represents the SurveyForm entity used in the application.
     @Id
     @GeneratedValue
     private Long id;
